@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área da Instituição</title>
+    <link rel="stylesheet" href="css/PagInst.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <a href="#"><img src="img/logo.png" alt="logo do site" id="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="#sectNota">Média</a></li>
+                <li><a href="#sectProfs">Professores</a></li>
+                <li><a href="#sectNovaTurma">Nova Turma</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br><br>
+        <h1>(Nome da Instituição)</h1>
+        <br><br><br>
+        <section id="sectNota">
+            <form action="javascript:;" id="nota">
+                <label for="media">Atribuir média escolar: </label>
+                <input type="number" name="media" id="media" max="10" min="0">
+            </form>
+        </section>
+        <br><br><br>
+        <section id="sectProfs">
+            <h2>Professores v</h2>
+            <br><br>
+            <div id="profs">
+                <a href="../Página professor/index.html" id="profLink">Cláudio</a>
+                <a href="" id="profLink">Ayron</a>
+                <a href="" id="profLink">Rosangela</a>
+                <a href="" id="profLink">Silvia</a>
+                <a href="" id="profLink">+</a>
+            </div>
+        </section>
+        <br><br><br>
+        <section id="sectNovaTurma">
+            <h2>Nova Turma v</h2>
+            <br><br>
+            <div id="novaTurma">
+                <form action="javascript:;" id="formTurma">
+                    <label for="profs">Professor: </label>
+                    <select name="profs" id="itemForm">
+                        <option value="prof">Selecione o professor da turma</option>
+                        <option value="prof">Cláudio</option>
+                        <option value="prof">Ayron</option>
+                        <option value="prof">Rosangela</option>
+                        <option value="prof">Silvia</option>
+                    </select>
+                    <label for="">Nome da Turma: </label>
+                    <input type="text" placeholder="Digite o nome da turma" id="itemForm">
+                    <br>
+                    <div id="cxBtnForm">
+                        <button type="submit" id="btnForm">Criar turma</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
