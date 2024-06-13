@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Professor</title>
     <link rel="stylesheet" href="css/PagProf.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <header id="cabecalho">
-        <a href="#"><img src="img/logo.png" alt="logo do site" id="logo"></a>
-    </header>
-    <main>
-        <br><br>
-        <h1>Bem Vindo, <span>(Nome Professor)</span></h1>
-        <br><br><br>
-        <section>
+<body id="body">
+    <nav class="navbar" id="cabecalho">
+        <div class="container-fluid">
+            <img class="navbar-brand align-center" src="img/logo.png" alt="logo do site" id="logo">
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row py-5">
+            <h1 class="text-center">Bem Vindo, <span>(Nome Professor)</span></h1>
+        </div>
+
+        <section class="row py-5">
             <h2>Classes v</h2>
-            <br><br>
-            <div id="salas">
-                <a href="" id="salaLink">1ºA</a>
-                <a href="" id="salaLink">1ºB</a>
-                <a href="" id="salaLink">2ºA</a>
-                <a href="" id="salaLink">3ºA</a>
+            <div class="row justify-content-beetwen p-2 g-2" id="salas">
+                <a class="col-3 text-center" href="" id="salaLink">1ºA</a>
+                <a class="col-3 text-center" href="" id="salaLink">1ºB</a>
+                <a class="col-3 text-center" href="" id="salaLink">2ºA</a>
+                <a class="col-3 text-center" href="" id="salaLink">3ºA</a>
+                <a class="col-3 text-center" href="" id="salaLink">2ºB</a>
+                <a class="col-3 text-center" href="" id="salaLink">1ºD</a>
             </div>
         </section>
     </main>
