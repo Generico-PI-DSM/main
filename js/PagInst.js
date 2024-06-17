@@ -53,7 +53,7 @@ function carregaOptions() {
     select.empty();
     select.append('<option value="prof">Selecione o professor da turma</option>')
 
-    opcoes.each(function() {
+    opcoes.each(() => {
         var texto = $(this).text();
         var valor = texto.toLowerCase().replace(/\s/g, '_');
 

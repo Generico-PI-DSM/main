@@ -19,15 +19,18 @@ function slides(id, sl) {
 
 function carregaGrafico() {
     var ctx = document.getElementById('myChart');
+    var mat1 = $('#mat1').value();
+    var mat2 = $('#mat2').value();
+    var mat3 = $('#mat3').value();
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            labels: ['Matéria 1', 'Matéria 2', 'Matéria 3'],
             datasets: [{
-                label: 'Vendas',
-                data: [65, 59, 80, 81, 56, 55],
+                label: 'Acertos',
+                data: [mat1, mat2, mat3],
                 borderColor: 'black',
-                backgroundColor: 'blue'
+                backgroundColor: ['blue', 'green', 'yellow']
             }]
         },
         options: {
