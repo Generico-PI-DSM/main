@@ -35,14 +35,14 @@ h2{
     font-size: 30px;
 }
 
-#slide1, #slide2{
+.slide{
     text-decoration: none;
     color: #3ca6ae;
     font-weight: bold;
     font-size: 36px;
 }
 
-#slide1:hover, #slide2:hover{
+.slide:hover{
     cursor: pointer;
 }
 
@@ -97,5 +97,13 @@ tbody tr td{
 
 #notas a:hover{
     background-color: #e0e0e0;
+    border-radius: 6px;
+}
+
+.notaAlunos{
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
     border-radius: 6px;
 }

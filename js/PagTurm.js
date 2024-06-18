@@ -1,41 +1,40 @@
 var estados = {};
 
-function slides(id, sl) {
+function slides(target, sl) {
+
     if (estados[sl] == undefined) {
         estados[sl] = 0;
     }
 
-    $('#' + id).slideToggle();
+    $(target).slideToggle();
+    var selector = 'a[data-type="' + sl + '"]';
     if (estados[sl] == 0) {
-        $('#' + sl).empty();
-        $('#' + sl).html('<a href="javascript:;" id="' + sl + '">></a>');
+        $(selector).empty();
+        $(selector).html('<a href="javascript:;" data-type="'+ sl +'" class="slide-btn slide" data-target="'+ target +'">></a>');
         estados[sl] = 1;
     } else if (estados[sl] == 1) {
-        $('#' + sl).empty();
-        $('#' + sl).html('<a href="javascript:;" id="' + sl + '">v</a>');
+        $(selector).empty();
+        $(selector).html('<a href="javascript:;" data-type="'+ sl +'" class="slide-btn slide" data-target="'+ target +'">v</a>');
         estados[sl] = 0;
     }
 }
 
-function carregaGrafico() {
-    var ctx = document.getElementById('myChart');
-    var mat1 = $('#mat1').value();
-    var mat2 = $('#mat2').value();
-    var mat3 = $('#mat3').value();
+function criarGrafico(idCanvas, dados, cores) {
+    var ctx = document.getElementById(idCanvas);
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
             labels: ['Matéria 1', 'Matéria 2', 'Matéria 3'],
             datasets: [{
                 label: 'Acertos',
-                data: [mat1, mat2, mat3],
+                data: dados,
                 borderColor: 'black',
-                backgroundColor: ['blue', 'green', 'yellow']
+                backgroundColor: cores
             }]
         },
         options: {
-            responsive: false, 
-            maintainAspectRatio: true, 
+            responsive: false,
+            maintainAspectRatio: true,
             scales: {
                 x: {
                     display: false
@@ -50,15 +49,28 @@ function carregaGrafico() {
 
 
 function carregarFuncoes(ev) {
-    $('#slide1').click(() => {
-        slides('notas', 'slide1');
+
+    $('.slide-btn').click(function() {
+        var target = $(this).data('target');
+        var type = $(this).data('type');
+        slides(target, type);
     });
 
-    $('#slide2').click(() => {
-        slides('chamada', 'slide2');
+
+    $('.slide-btn-aluno').click(function () {
+        var target = $(this).data('target');
+        $(target).slideToggle();
     });
 
-    carregaGrafico();
+    var mat1 = $('#mat1').val();
+    var mat2 = $('#mat2').val();
+    var mat3 = $('#mat3').val();
+
+    criarGrafico('myChart1', [mat1, mat2, mat3], ['rgb(60, 166, 174)', 'rgb(47, 123, 129)', 'rgb(176, 195, 199)']);
+    criarGrafico('myChart2', [mat1, mat2, mat3], ['rgb(60, 166, 174)', 'rgb(47, 123, 129)', 'rgb(176, 195, 199)']);
+    criarGrafico('myChart3', [mat1, mat2, mat3], ['rgb(60, 166, 174)', 'rgb(47, 123, 129)', 'rgb(176, 195, 199)']);
+    criarGrafico('myChart4', [mat1, mat2, mat3], ['rgb(60, 166, 174)', 'rgb(47, 123, 129)', 'rgb(176, 195, 199)']);
+
 }
 
 $(document).ready(carregarFuncoes);

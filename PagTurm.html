@@ -25,24 +25,12 @@
             <h1 class="text-center">(Nome da turma)</h1>
         </div>
 
-        <section id="sectNotas" class="row p-5 m-3">
-            <h2>Notas <a href="javascript:;" id="slide1">v</a></h2>
+        <section id="sectNotas" class="row p-5 m-3 con">
+            <h2>Notas <a href="javascript:;" data-type="notas" class="slide-btn slide" data-target="#notas">v</a></h2>
             <div id="notas" class="row">
-                <a href="javascript:;">André</a>
-                <div class="row">
-                    <canvas class="col-6" id="myChart" width="200"></canvas>
-                    <form class="col" action="javascript:;">
-                        <label for="mat1">Matéria 1: </label>
-                        <input type="number" name="mat1" max="10" min="0" value="3">
-                        <label for="mat2">Matéria 2: </label>
-                        <input type="number" name="mat2" max="10" min="0" value="3">
-                        <label for="mat3">Matéria 3: </label>
-                        <input type="number" name="mat3" max="10" min="0" value="3">
-                    </form>
-                </div>
-                <a href="javascript:;">Ana</a>
-                <div class="row">
-                    <canvas class="col-6" id="myChart" width="200"></canvas>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x1">André</a>
+                <div class="notaAlunos" id="slide1x1" data-type="nota1">
+                    <canvas class="col-6" id="myChart1" width="200"></canvas>
                     <form class="col" action="javascript:;">
                         <label for="mat1">Matéria 1: </label>
                         <input type="number" name="mat1" max="10" min="0" value="3" id="mat1">
@@ -52,9 +40,9 @@
                         <input type="number" name="mat3" max="10" min="0" value="3" id="mat3">
                     </form>
                 </div>
-                <a href="javascript:;">Breno</a>
-                <div class="row">
-                    <canvas class="col-6" id="myChart" width="200"></canvas>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x2">Ana</a>
+                <div class="notaAlunos" id="slide1x2" data-type="nota2">
+                    <canvas class="col-6" id="myChart2" width="200"></canvas>
                     <form class="col" action="javascript:;">
                         <label for="mat1">Matéria 1: </label>
                         <input type="number" name="mat1" max="10" min="0" value="3">
@@ -64,9 +52,21 @@
                         <input type="number" name="mat3" max="10" min="0" value="3">
                     </form>
                 </div>
-                <a href="javascript:;">Caio</a>
-                <div class="row">
-                    <canvas class="col-6" id="myChart" width="200"></canvas>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x3">Breno</a>
+                <div class="notaAlunos" id="slide1x3" data-type="nota3">
+                    <canvas class="col-6" id="myChart3" width="200"></canvas>
+                    <form class="col" action="javascript:;">
+                        <label for="mat1">Matéria 1: </label>
+                        <input type="number" name="mat1" max="10" min="0" value="3">
+                        <label for="mat2">Matéria 2: </label>
+                        <input type="number" name="mat2" max="10" min="0" value="3">
+                        <label for="mat3">Matéria 3: </label>
+                        <input type="number" name="mat3" max="10" min="0" value="3">
+                    </form>
+                </div>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x4">Caio</a>
+                <div class="notaAlunos" id="slide1x4" data-type="nota4">
+                    <canvas class="col-6" id="myChart4" width="200"></canvas>
                     <form class="col" action="javascript:;">
                         <label for="mat1">Matéria 1: </label>
                         <input type="number" name="mat1" max="10" min="0" value="3">
@@ -78,9 +78,8 @@
                 </div>
             </div>
         </section>
-
         <section id="sectChamada" class="row p-5 m-3">
-            <h2>Chamada <a href="javascript:;" id="slide2">v</a></h2>
+            <h2>Chamada <a href="javascript:;" data-type="chamada" class="slide-btn slide" data-target="#chamada">v</a></h2>
             <div id="chamada" class="p-0">
                 <table class="container-fluid">
                     <thead>
