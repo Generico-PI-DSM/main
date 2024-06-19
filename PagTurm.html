@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página da Turma</title>
+    <link rel="stylesheet" href="css/PagTurm.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="img/logo.png" alt="logo do site" id="logo">
+            <ul id="navItens" class="navbar-nav fw-bolder">
+                <li class="nav-item px-2"><a class="nav-link" href="#sectNotas">Notas</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="#sectChamada">Chamada</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="row py-5 m-0">
+            <h1 class="text-center" id="nomeTurma"><span>(Nome da turma)</span></h1>
+        </div>
+
+        <section id="sectNotas" class="row p-5 m-3 con">
+            <h2>Notas <a href="javascript:;" data-type="notas" class="slide-btn slide" data-target="#notas">v</a></h2>
+            <div id="notas" class="row">
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x1">André</a>
+                <div class="notaAlunos" id="slide1x1" data-type="nota1">
+                    <canvas class="col-6" id="myChart1" width="200"></canvas>
+                    <form class="col attGrf" data-chart="myChartGlobal1" id="formMat" action="javascript:;">
+                        <label for="mat1">Matéria 1: </label>
+                        <input type="number" name="mat1" max="10" min="0" id="mat1">
+                        <label for="mat2">Matéria 2: </label>
+                        <input type="number" name="mat2" max="10" min="0" id="mat2">
+                        <label for="mat3">Matéria 3: </label>
+                        <input type="number" name="mat3" max="10" min="0" id="mat3">
+
+                        <button type="reset">Enviar</button>
+                    </form>
+                </div>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x2">Ana</a>
+                <div class="notaAlunos" id="slide1x2" data-type="nota2">
+                    <canvas class="col-6" id="myChart2" width="200"></canvas>
+                    <form class="col attGrf" data-chart="myChartGlobal2" id="formMat" action="javascript:;">
+                        <label for="mat1">Matéria 1: </label>
+                        <input type="number" name="mat1" max="10" min="0" id="mat1">
+                        <label for="mat2">Matéria 2: </label>
+                        <input type="number" name="mat2" max="10" min="0" id="mat2">
+                        <label for="mat3">Matéria 3: </label>
+                        <input type="number" name="mat3" max="10" min="0" id="mat3">
+
+                        <button type="reset">Enviar</button>
+                    </form>
+                </div>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x3">Breno</a>
+                <div class="notaAlunos" id="slide1x3" data-type="nota3">
+                    <canvas class="col-6" id="myChart3" width="200"></canvas>
+                    <form class="col attGrf" data-chart="myChartGlobal3" id="formMat" action="javascript:;">
+                        <label for="mat1">Matéria 1: </label>
+                        <input type="number" name="mat1" max="10" min="0" id="mat1">
+                        <label for="mat2">Matéria 2: </label>
+                        <input type="number" name="mat2" max="10" min="0" id="mat2">
+                        <label for="mat3">Matéria 3: </label>
+                        <input type="number" name="mat3" max="10" min="0" id="mat3">
+
+                        <button type="reset">Enviar</button>
+                    </form>
+                </div>
+                <a href="javascript:;" class="slide-btn-aluno mt-3" data-target="#slide1x4">Caio</a>
+                <div class="notaAlunos" id="slide1x4" data-type="nota4">
+                    <canvas class="col-6" id="myChart4" width="200"></canvas>
+                    <form class="col attGrf" data-chart="myChartGlobal4" id="formMat" action="javascript:;">
+                        <label for="mat1">Matéria 1: </label>
+                        <input type="number" name="mat1" max="10" min="0" id="mat1">
+                        <label for="mat2">Matéria 2: </label>
+                        <input type="number" name="mat2" max="10" min="0" id="mat2">
+                        <label for="mat3">Matéria 3: </label>
+                        <input type="number" name="mat3" max="10" min="0" id="mat3">
+
+                        <button type="reset">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="sectChamada" class="row p-5 m-3">
+            <h2>Chamada <a href="javascript:;" data-type="chamada" class="slide-btn slide" data-target="#chamada">v</a>
+            </h2>
+            <div id="chamada" class="p-0">
+                <table class="container-fluid">
+                    <thead>
+                        <tr class="px-2">
+                            <th>Nome</th>
+                            <th>Presença</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label class="form-label" for="cham">André</label></td>
+                            <td><input class="checkbox" type="checkbox" name="cham"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="cham">Ana</label></td>
+                            <td><input class="checkbox" type="checkbox" name="cham"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="cham">Breno</label></td>
+                            <td><input class="checkbox" type="checkbox" name="cham"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="cham">Caio</label></td>
+                            <td><input class="checkbox" type="checkbox" name="cham"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="cham">Cris</label></td>
+                            <td><input class="checkbox" type="checkbox" name="cham"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/PagTurm.js"></script>
+</body>
+
+</html>

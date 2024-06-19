@@ -19,7 +19,7 @@ function slides(id, sl) {
 
 function adicionarNovoProfessor() {
     var nomeNovoProf = $('#novoProfNome').val();
-    var novoProf = $('<a>').addClass('col-3 text-center profLink').attr('href', '').text(nomeNovoProf);
+    var novoProf = $('<a>').addClass('col-3 text-center profLink').attr('href', 'PagProf.html?nome=' + encodeURIComponent(nomeNovoProf)).text(nomeNovoProf);
     $('#profsExist').append(novoProf);
 }
 
@@ -51,7 +51,7 @@ function carregaOptions() {
     var select = $('#itemForm');
 
     select.empty();
-    select.append('<option value="prof">Selecione o professor da turma</option>')
+    select.append('<option value="prof">Selecione o professor da turma</option>');
 
     opcoes.each(function() {
         var texto = $(this).text();
