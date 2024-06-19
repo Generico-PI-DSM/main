@@ -59,13 +59,13 @@ function atualizarGrafico(chart, dadosValidados) {
 }
 
 function validarDadosGrafico(dados) {
-    var soma = dados.reduce(function(soma, valor) {
+    var soma = dados.reduce(function (soma, valor) {
         return soma + parseFloat(valor);
     }, 0);
 
     if (soma > 10) {
         var fatorDeReducao = 10 / soma;
-        return dados.map(function(valor) {
+        return dados.map(function (valor) {
             return valor * fatorDeReducao;
         });
     } else {
@@ -79,34 +79,6 @@ function fechaSlideAluno() {
         $(target).slideUp();
     });
 };
-
-function novaMat() {
-    $('form').submit(function (event) {
-        event.preventDefault();
-        var novaMateria = $('input[name="novaMateria"]').val();
-
-        if (novaMateria) {
-            var novoElemento = $('<label>').attr('for', novaMateria).text(novaMateria + ': ');
-            novoElemento = novoElemento.add($('<input>').attr({
-                type: 'number',
-                name: novaMateria,
-                max: '10',
-                min: '0',
-                value: '3'
-            }));
-
-            $('#formMat').find('label[for="novaMateria"]').remove();
-            $('#formMat').find('input[name="novaMateria"]').remove();
-            $('#formMat').find('button[type="submit"]').remove();
-
-            $('#formMat').append(novoElemento);
-
-            $('#formMat').append('<label for="novaMateria">Adicionar Matéria: </label>');
-            $('#formMat').append('<input type="text" name="novaMateria">');
-            $('#formMat').append('<button type="submit">Criar</button>');
-        }
-    });
-}
 
 
 function carregarFuncoes(ev) {
@@ -125,21 +97,25 @@ function carregarFuncoes(ev) {
 
     fechaSlideAluno();
 
-    novaMat();
+    $('.attGrf').each(function () {
+        let form = $(this);
+        let chartId = form.data('chart');
+        let chart = window[chartId];
 
-    $('.attGrf').each(function() {
-        var form = $(this);
-        var chartId = form.data('chart');
-        var chart = window[chartId];
-    
         form.find('input[type="number"]').on('change', function () {
-            var novosDados = form.find('input[type="number"]').map(function() {
+            var novosDados = form.find('input[type="number"]').map(function () {
                 return $(this).val();
             }).get();
             var dadosValidados = validarDadosGrafico(novosDados, 10);
             atualizarGrafico(chart, dadosValidados);
         });
     });
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var nomeTurma = urlParams.get('nomeTurma');
+    if (nomeTurma) {
+        $('.row h1 span').text(nomeTurma);
+    }
 }
 
 $(document).ready(carregarFuncoes);

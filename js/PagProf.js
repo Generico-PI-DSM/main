@@ -21,7 +21,11 @@ function carregarFuncoes(ev) {
     if (nomeProf) {
         $('.row.py-5 h1 span').text(nomeProf);
     }
-    
+
+    $('.salaLink').on('click', function(event) {
+        var nomeTurma = $(this).text();
+        $(this).attr('href', 'PagTurm.html?nomeTurma=' + encodeURIComponent(nomeTurma));
+    });
 }
 
 $(document).ready(carregarFuncoes);
