@@ -62,12 +62,24 @@
                 <form class="fw-bold" action="javascript:;" id="formTurma">
                     <label class="form-label" for="profs">Professor: </label>
                     <select class="form-select" name="profs" id="itemForm"></select>
+                    <label class="form-label" for="profs">Matéria: </label>
+                    <select class="form-select" name="mat" id="itemForm">
+                        <option value="nan">Selecione a matéria</option>
+                        <option value="port">Português</option>
+                        <option value="Mate">Matematica</option>
+                        <option value="hist">História</option>
+                        <option value="geog">Geografia</option>
+                        <option value="biol">Biologia</option>
+                        <option value="fisi">Física</option>
+                        <option value="quim">Química</option>
+                        <option value="ingl">Inglês</option>
+                    </select>
                     <label class="form-label" for="turma">Nome da Turma: </label>
                     <input class="form-control" type="text" placeholder="Digite o nome da turma" id="itemForm"
                         name="turma">
                     <br>
                     <div class="row justify-content-end" id="cxBtnForm">
-                        <button class="btn" type="submit" id="btnForm">Criar turma</button>
+                        <button class="btn" type="reset" id="btnForm">Criar turma</button>
                     </div>
                 </form>
             </div>
