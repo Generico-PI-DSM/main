@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(6, 155, 28);
+}
+
+.center{
+    text-align: center;
+    color: white;
+    padding: 5%;
+}
+.button{
+    color: aliceblue;
+
+    background-color: rgb(16, 229, 16);
+
+}
+
+

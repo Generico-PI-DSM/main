@@ -1,0 +1,17 @@
+#body {
+    background-color: #92c4c1;
+    min-height: 90vh;
+}
+
+h1 {
+    color: rgb(241, 248, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+#login {
+    background-color: rgba(70, 70, 70, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    color: #ffffff;
+}

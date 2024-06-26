@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Online</title>
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+  <main>
+    <div class="center">
+      <h1>Calculadora de Média</h1>
+      <div class="bloco">
+        <form class="" method="post">
+          <p>História</p>
+          <input type="number" id="nota01" value="" max="10">
+          <br>
+          <p>Matemática</p>
+          <input type="number" id="nota02" value="" max="10">
+          <br>
+          <p>Biologia</p>
+          <input type="number" id="nota03" value="" max="10">
+          <br>
+          <p>Português</p>
+          <input type="number" id="nota04" value="" max="10">
+          <br>
+          <br>
+          <input class="button"  type="button" onclick="javascript:calculo();" name="name" value="Enviar">
+          <br>
+          <p>Média Final</p>
+          <input type="text" id="txtResultado" value="">
+          <p class="res" ></p>
+        </div>
+        </form>
+
+      </div>
+      
+      <script src="js/media.js"></script>
+    </div>
+
+    </main>
+</html>
